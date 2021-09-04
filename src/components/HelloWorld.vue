@@ -21,11 +21,11 @@
       <b-row>
         <b-col>
           <label><code>50</code></label>
-          <b-form-input type="number" v-model="dati.nopesoieri" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.nopesoieri" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col>
           <label><code>50</code></label>
-          <b-form-input type="number" v-model="dati.nopesooggi" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.nopesooggi" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col align-self="center">
           <label><code>50</code></label>
@@ -35,11 +35,11 @@
       <b-row>
         <b-col>
           <label><code>52</code></label>
-          <b-form-input type="number" v-model="dati.leggeroieri" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.leggeroieri" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col>
           <label><code>52</code></label>
-          <b-form-input type="number" v-model="dati.leggerooggi" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.leggerooggi" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col align-self="center">
           <label><code>52</code></label>
@@ -49,11 +49,11 @@
       <b-row>
         <b-col>
           <label><code>56</code></label>
-          <b-form-input type="number" v-model="dati.medioieri" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.medioieri" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col>
           <label><code>56</code></label>
-          <b-form-input type="number" v-model="dati.mediooggi" placeholder="Enter your name"></b-form-input>
+          <b-form-input type="number" v-model="dati.mediooggi" placeholder="Valore"></b-form-input>
         </b-col>
         <b-col align-self="center">
           <label><code>56</code></label>
@@ -86,12 +86,12 @@ export default {
   data(){
     return {
       dati: {
-        leggerooggi: 0,
-        leggeroieri: 0,
-        mediooggi: 0,
-        medioieri: 0,
-        nopesooggi: 0,
-        nopesoieri: 0
+        leggerooggi: null,
+        leggeroieri: null,
+        mediooggi: null,
+        medioieri: null,
+        nopesooggi: null,
+        nopesoieri: null
       },
       success: false
     }
@@ -129,11 +129,11 @@ export default {
     },
     inverti(){
       this.dati.nopesoieri = localStorage.nopesooggi
-      this.dati.nopesooggi = 0
+      this.dati.nopesooggi = null
       this.dati.leggeroieri = localStorage.leggerooggi
-      this.dati.leggerooggi = 0
+      this.dati.leggerooggi = null
       this.dati.medioieri = localStorage.mediooggi
-      this.dati.mediooggi = 0
+      this.dati.mediooggi = null
     }    
   },  
   computed: {
